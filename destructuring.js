@@ -9,11 +9,12 @@
 ////////// PROBLEM 1 //////////
 
 // Do not edit the code below.
+
 var carDetails = {
   color: 'red',
   make: 'toyota',
   model: 'tacoma',
-  year: 1994
+  year: 1994,
 }
 // Do not edit the code above.
 
@@ -23,9 +24,12 @@ var carDetails = {
 
 //Code Here
 
-
-
-////////// PROBLEM 2 //////////
+var {color} = carDetails;
+var {make} = carDetails;
+var {model} = carDetails; 
+var {year} = carDetails;
+  
+  ////////// PROBLEM 2 //////////
 
 /*
   In the function below named greeting, it is receiving an object as a parameter. 
@@ -35,6 +39,11 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
+
+  var {firstName, lastName, title} = obj;
+
+
+
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -55,6 +64,11 @@ function greeting( obj ) {
 
 //Code Here
 
+let totalPopulation = (object) => {
+  let states = {utah, california, texas, arizona} = object;
+  return states;
+};
+
 
 
 ////////// PROBLEM 4 //////////
@@ -69,7 +83,14 @@ function greeting( obj ) {
 
 //Code Here
 
-
+let ingredients = (object) => {
+  let newArr = [];
+  let {carb, fat, protein} = object;
+  for (let key in object){
+    newArr.push(object[key])
+  }
+  return newArr;
+}
 
 ////////// PROBLEM 5 //////////
 
@@ -89,6 +110,7 @@ function greeting( obj ) {
 
 
 
+
 ////////// PROBLEM 6 //////////
 
 /*
@@ -99,4 +121,13 @@ function greeting( obj ) {
 
 //Code Here
 
+let numberGroups = ({a, b, c}) => {
+  if (a.length > b.length && a.length > c.length){
+    return a;
+  } else if (b.length > a.length && b.length > c.length){
+    return b;
+  } else if (c.length > a.length && c.length > b.length){
+    return c;
+  }
+}
 
